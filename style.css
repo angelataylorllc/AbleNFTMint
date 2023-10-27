@@ -1,0 +1,267 @@
+:root {
+  --medium-purple: #7759F3;
+  --light-gray: #C4C4C4;
+  --neon-aqua: #3AFCC2;
+  --royal-purple: #8E2AC3;
+  --sunflower-yellow: #E0C566;
+  --rose-pink: #E8D6C4;
+  --hot-pink: #ED4E95;
+  --black: #000000;
+  --medium-green: #12A74B;
+  --turquoise: #82D6C9;
+  --lavendar: #9E8FDF;
+  --light-lavendar: #CDB3ED;
+  --yellow-tan: #D6BF9E;
+  --muted-pink: #DE7F9C;
+  --medium-pink: #F2B6C7;
+  --candy-orange: #F8B483;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Inter";
+  color: white;
+  background: url("images/top_squiggly.svg") top no-repeat, 
+  linear-gradient(151deg, #1E0426 2.97%, #100C3A 25.62%, #130517 51.04%, 
+  #050130 72.12%, #0A0426 91.18%);
+  background-size: 120%;
+  height: 100vh;
+  width: 100%;
+}
+
+.wrapper  {
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+/* Buttons */
+
+.btn {
+  border-radius: 5px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.btn.walletconnect {
+  padding: 20px 32px;
+  background: var(--medium-purple);
+}
+
+.btn.mintNFT {
+  padding: 20px 40px;
+  background: var(--royal-purple);
+}
+
+.btn.search {
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  border: none;
+  background: var(--medium-purple);
+}
+
+.btn.subscribe {
+  padding: 4px 8px;
+  font-size: 28px;
+  border: none;
+  background: var(--medium-purple);
+  width: 70px;
+  height: 70px;
+}
+
+/* Header */
+
+header {
+
+  height: 100vh;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* position: fixed; */
+  /* max-width: 1520px; */
+  top: 16px;
+}
+
+nav.logo {
+  max-height: 20px;
+  flex-shrink: 0;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+}
+
+nav input {
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  width: 225px;
+  height: 48px;
+  padding: 20px;
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 300px;
+}
+
+.hero-section .left {
+  width: 756px;
+}
+.hero-section .left h1 {
+  font-size: 70px;
+  margin-bottom: 10px;
+  font-weight: 400;
+
+}
+
+.hero-section .left p {
+  font-size: 18px;
+  color: #706C83;
+  margin-bottom: 32px;
+}
+
+/* White Paper Section */
+
+.whitepaper-section .top {
+  text-align: center;
+  margin-bottom: 156px;
+}
+
+.whitepaper-section .top h1 {
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.whitepaper-section .top p {
+  color: #706C83;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 30px; 
+}
+
+.whitepaper-section .top p a {
+  text-decoration: none;
+  color: #706C83;
+}
+
+.whitepaper-section .bottom {
+  display: flex;
+  align-items: center;
+}
+
+.whitepaper-section .bottom h1 {
+  font-size: 32px;
+  font-weight: 400;
+  margin-left: 10px;
+  margin-right: 36px;
+}
+
+.whitepaper-section .bottom input {
+  width: 670px;
+  height: 70px;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  text-align: center;
+  margin-bottom: 67px;
+}
+
+/* About Us Section */
+
+.aboutus-section {
+  margin-top: 67px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 57px;
+}
+
+.aboutus-section .left {
+  align-items: start;
+}
+.aboutus-section .left .logo {
+  margin-left: 40px;
+  margin-right: 110px;
+  margin-bottom: 67px;
+}
+
+.aboutus-section .left .social ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  list-style: none;
+  text-align: left;
+  width: 208px;
+
+  margin-left: 0;
+}
+
+.aboutus-section .left .social ul img {
+  height: 28px;
+}
+
+.aboutus-section .right h1 {
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 60px;
+}
+
+.aboutus-section .right p {
+  color: #706C83;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 30px;
+}
+
+/* Footer Section */
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #130518;
+  height: 60px;
+  padding-bottom: 106px;
+}
+
+.footer-section .left ul {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  bottom: 106px;
+}
+
+.footer-section .left ul li a {
+  text-decoration: none;
+  color: #706C83;
+  font-size: 16px;
+}
