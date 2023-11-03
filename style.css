@@ -33,12 +33,13 @@ body {
   background-size: 120%;
   height: 100vh;
   width: 100%;
+  position: relative;
 }
 
 .wrapper  {
-  max-width: 1520px;
+  max-width: 1720px;
   margin: 0 auto;
-  padding: 20px 100px;
+  padding: 16px 166px;
 }
 
 /* Buttons */
@@ -75,8 +76,8 @@ body {
   font-size: 28px;
   border: none;
   background: var(--medium-purple);
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
 }
 
 /* Header */
@@ -153,6 +154,17 @@ nav input {
 
 /* White Paper Section */
 
+.Whitepapersection {
+  width: 788px; 
+  height: 131px; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+  align-items: center; 
+  gap: 32px; 
+  display: inline-flex;
+}
+
+
 .whitepaper-section .top {
   text-align: center;
   margin-bottom: 156px;
@@ -161,6 +173,13 @@ nav input {
 .whitepaper-section .top h1 {
   font-size: 32px;
   font-weight: 500;
+  align-self: stretch; 
+  height: 35px; 
+  text-align: center; 
+  color: white;  
+  font-family: Inter;  
+  line-height: 24px; 
+  word-wrap: break-word;
 }
 
 .whitepaper-section .top p {
@@ -180,6 +199,18 @@ nav input {
   align-items: center;
 }
 
+.fullscreenpurpleSideBar {
+  height: 70px;
+}
+
+.smallscreenpurpleSideBar {
+  visibility: hidden;
+}
+
+.brnodisplay {
+  visibility: hidden;
+}
+
 .whitepaper-section .bottom h1 {
   font-size: 32px;
   font-weight: 400;
@@ -190,6 +221,7 @@ nav input {
 .whitepaper-section .bottom input {
   width: 670px;
   height: 70px;
+  font-size: 14px;
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(255, 255, 255, 0.03);
@@ -215,7 +247,7 @@ nav input {
   margin-bottom: 67px;
 }
 
-.aboutus-section .left .social ul {
+.aboutus-section .left .fullscreensocial ul {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -226,7 +258,7 @@ nav input {
   margin-left: 0;
 }
 
-.aboutus-section .left .social ul img {
+.aboutus-section .left .fullscreensocial ul img {
   height: 28px;
 }
 
@@ -242,6 +274,12 @@ nav input {
   font-style: normal;
   font-weight: 700;
   line-height: 30px;
+  word-wrap: normal;
+  text-align: justify;
+}
+
+.smallscreensocial {
+  visibility: hidden;
 }
 
 /* Footer Section */
@@ -268,7 +306,12 @@ nav input {
   font-size: 16px;
 }
 
+/* iPad Display Settings */
+
 @media(max-width: 1100px) {
+  header {
+    height: 650px;
+  }
   .btn.walletconnect {
     width: 117px;
     height: 37px;
@@ -284,6 +327,23 @@ nav input {
     font-size: 16px;
     padding: 4px;
     
+  }
+
+  .btn.mintNFT {
+    width: 97px;
+    height:38px;
+    font-size: 12px;
+    padding: 13px;
+    text-align: center;
+    margin-top: 30px;
+    margin-left: 364px;
+    margin-bottom: 0;
+  }
+
+  .btn.subscribe {
+    width: 39px;
+    height: 39px;
+    font-size: 24px;
   }
 
   .wrapper {
@@ -320,5 +380,148 @@ nav input {
   nav ul form {
     display: flex;
     align-items: center;
+  }
+
+  .hero-section {
+    display: block;
+    margin-top: 54px;
+    margin-bottom: 0;
+  }
+  
+  .hero-section .left {
+    width: 100%;
+    display: block;
+  }
+  .hero-section .left h1 {
+    margin: 0;
+    font-size: 36px;
+    font-weight: 400;
+  
+  }
+  
+  .hero-section .left p {
+    font-size: 14px;
+    color: #706C83;
+    margin-bottom: 0;
+  }
+
+  .hero-section .right img {
+    padding: 20px;
+    gap: 28px;
+  }
+
+  .hero-section .right .girl {
+    width: 268px;
+    height: 301px;
+    margin-left: 48px;
+  }
+
+  .hero-section .right .boy {
+    width: 201px;
+    height: 224px;
+  }
+  
+  .whitepaper-section {
+    margin-top: 120px;
+  }
+  .whitepaper-section .top h1 {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+  
+  .whitepaper-section .top p {
+    margin-top: 65px;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+  
+  .whitepaper-section .top p a {
+    text-decoration: none;
+    color: #706C83;
+  }
+  
+  .whitepaper-section .bottom {
+    margin-top: 151px;
+    display: block;
+    text-align: center;
+  }
+  
+  .whitepaper-section .bottom h1 {
+    font-size: 18px;
+    font-weight: 400;
+    flex-shrink: 0;
+    text-align: center;
+  }
+ 
+   .fullscreenpurpleSideBar {
+    display: none;
+  }
+
+  .smallscreenpurpleSideBar {
+    visibility: visible;
+    width: 6px;
+    height: 41px;
+    margin-right: 23px;
+  }
+
+  .whitepaper-section .bottom form {
+    display: flex;
+    margin-left: 40px;
+  }
+  
+  .whitepaper-section .bottom input {
+    width: 387px;
+    height: 39px;
+    text-align: center;
+    margin-bottom: 67px;
+  }  
+
+  .purple-bar {
+    visibility: hidden;
+  }
+
+  .aboutus-section {
+    display: block;
+    margin-top: 0;
+  }
+
+  .aboutus-section .logo img {
+    width: 280px;
+    height: 80px;
+    flex-shrink: 0;
+    margin-left: 120px;
+  }
+
+  .fullscreensocial {
+    visibility: hidden;
+  }
+  .smallscreensocial {
+    visibility: visible;
+  }
+
+  .smallscreensocial ul {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    list-style: none;
+    text-align: center;
+    width: 208px;
+    width: 768px;
+    margin: 88px 160px;
+  }
+
+  .aboutus-section .right h1 {
+    font-size: 18px;
+  }
+
+  .aboutus-section .right p {
+    font-size: 11px;
+    text-align: justify;
+  }
+
+  .joinus {
+    font-size: 11px;
   }
 }
