@@ -7,6 +7,7 @@
   --rose-pink: #E8D6C4;
   --hot-pink: #ED4E95;
   --black: #000000;
+  --almost-black: #130518;
   --medium-green: #12A74B;
   --turquoise: #82D6C9;
   --lavendar: #9E8FDF;
@@ -15,6 +16,7 @@
   --muted-pink: #DE7F9C;
   --medium-pink: #F2B6C7;
   --candy-orange: #F8B483;
+  --white: #fff;
 }
 
 *,
@@ -46,7 +48,7 @@ body {
 
 .btn {
   border-radius: 5px;
-  color: #fff;
+  color: var(--white);
   display: inline-block;
   font-size: 16px;
   font-weight: 500;
@@ -64,10 +66,11 @@ body {
 }
 
 .btn.search {
-  padding: 12px;
+  padding: 9px;
   width: 48px;
   height: 48px;
   border: none;
+  font-size: 28px;
   background: var(--medium-purple);
 }
 
@@ -110,7 +113,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--white);
   font-size: 16px;
 }
 
@@ -122,7 +125,7 @@ nav input {
   width: 225px;
   height: 48px;
   padding: 20px;
-  color: #706C83;
+  color: var(--light-gray);
 }
 
 /* Hero Section */
@@ -148,7 +151,7 @@ nav input {
 
 .hero-section .left p {
   font-size: 18px;
-  color: #706C83;
+  color: var(--light-gray);
   margin-bottom: 32px;
 }
 
@@ -176,14 +179,13 @@ nav input {
   align-self: stretch; 
   height: 35px; 
   text-align: center; 
-  color: white;  
-  font-family: Inter;  
+  color: var(--white);  
   line-height: 24px; 
   word-wrap: break-word;
 }
 
 .whitepaper-section .top p {
-  color: #706C83;
+  color: var(--light-gray);
   font-size: 18px;
   font-weight: 400;
   line-height: 30px; 
@@ -191,7 +193,7 @@ nav input {
 
 .whitepaper-section .top p a {
   text-decoration: none;
-  color: #706C83;
+  color: var(--light-gray);
 }
 
 .whitepaper-section .bottom {
@@ -225,6 +227,7 @@ nav input {
   border-radius: 5px;
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(255, 255, 255, 0.03);
+  color: var(--light-gray);
   text-align: center;
   margin-bottom: 67px;
 }
@@ -269,13 +272,18 @@ nav input {
 }
 
 .aboutus-section .right p {
-  color: #706C83;
+  color: var(--light-gray);
   font-size: 14px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   line-height: 30px;
   word-wrap: normal;
   text-align: justify;
+}
+
+.aboutus-section .joinus {
+  font-weight: 700;
+  font-size: 15px;
 }
 
 .smallscreensocial {
@@ -288,7 +296,7 @@ nav input {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #130518;
+  background-color: var(--almost-black);
   height: 80px;
   padding: 20px;
 }
@@ -302,11 +310,15 @@ nav input {
 
 .footer-section .left ul li a {
   text-decoration: none;
-  color: #706C83;
+  color: var(--light-gray);
   font-size: 16px;
 }
 
+
+
 /* iPad Display Settings */
+
+
 
 @media(max-width: 1100px) {
   header {
@@ -369,7 +381,7 @@ nav input {
     width: 153px;
     height: 28px;
     font-size: 10px;
-    color: #706C83;
+    color: var(--light-gray);
     outline: none;
   }
   
@@ -401,7 +413,7 @@ nav input {
   
   .hero-section .left p {
     font-size: 14px;
-    color: #706C83;
+    color: var(--light-gray);
     margin-bottom: 0;
   }
 
@@ -439,7 +451,7 @@ nav input {
   
   .whitepaper-section .top p a {
     text-decoration: none;
-    color: #706C83;
+    color: var(--light-gray);
   }
   
   .whitepaper-section .bottom {
@@ -512,6 +524,10 @@ nav input {
     margin: 88px 160px;
   }
 
+  .smallscreensocial img {
+    width: 30px;
+    height: 30px;
+  }
   .aboutus-section .right h1 {
     font-size: 18px;
   }
@@ -523,5 +539,24 @@ nav input {
 
   .joinus {
     font-size: 11px;
+  }
+
+  .wrapper-footer  {
+
+    background-color: var(--almost-black);
+    height: 230px;
+    padding: 0;
+  }
+
+  .footer-section {
+    display: block;
+    text-align: center;
+  }
+  .footer-section .left {
+    margin: 40px 100px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 28px; 
+    gap: 20px;
   }
 }
