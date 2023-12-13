@@ -466,23 +466,26 @@ nav input {
   height: 5rem;
   text-align: center;
   padding: 0 12rem;
+  font-size: 1rem;
+  margin-bottom: 6.75rem;
 }
 
 .footer-section .left ul {
   display: flex;
   gap: 3.125rem;
   list-style: none;
-  bottom: 6.75rem;
 }
 
 .footer-section .left ul li a {
   text-decoration: none;
   color: var(--light-gray);
-  font-size: 1rem;
+  
 }
 
 .footer-section .right {
-  text-align: right;
+  display: flex;
+  align-items: center;
+  
 }
 
 
