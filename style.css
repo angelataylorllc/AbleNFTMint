@@ -25,69 +25,146 @@
   box-sizing: border-box;
 }
 
+
 body {
   margin: 0;
   font-family: "Inter";
   color: white;
-  background: url("images/top_squiggly.svg") top no-repeat, 
-  linear-gradient(151deg, #1E0426 2.97%, #100C3A 25.62%, #130517 51.04%, 
+  background: url("images/top_squiggly.svg") top no-repeat, linear-gradient(151deg, #1E0426 2.97%, #100C3A 25.62%, #130517 51.04%, 
   #050130 72.12%, #0A0426 91.18%);
   background-size: 120%;
   height: 100vh;
   width: 100%;
-  position: relative;
+  /* position: relative; */
 }
 
-.wrapper  {
-  max-width: 1720px;
-  margin: 0 auto;
-  padding: 16px 166px;
+
+/* Imported Reset from https://andy-bell.co.uk/a-more-modern-css-reset/ */
+
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
 }
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* End Imported Reset */
+
+
+
+.wrapper  {
+  max-width: 107.5rem;
+  margin: 0 auto;
+  padding: 1rem 10.375rem;
+}
+
 
 /* Buttons */
 
+
 .btn {
-  border-radius: 5px;
+  border-radius: .313rem;
   color: var(--white);
   display: inline-block;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 500;
   text-decoration: none;
 }
 
 .btn.walletconnect {
-  padding: 20px 32px;
+  padding: 1.25rem 2rem;
   background: var(--medium-purple);
 }
 
 .btn.mintNFT {
-  padding: 20px 40px;
+  padding: 1.25rem 2.5rem;
   background: var(--royal-purple);
 }
 
 .btn.search {
-  padding: 9px;
-  width: 48px;
-  height: 48px;
+  width: 3rem;
+  height: 3rem;
   border: none;
-  font-size: 28px;
+  font-size: 1.75rem;
   background: var(--medium-purple);
 }
 
 .btn.subscribe {
-  padding: 4px 8px;
-  font-size: 28px;
+  font-size: 2vw;
   border: none;
   background: var(--medium-purple);
-  width: 72px;
-  height: 72px;
+  width: 3vw;
+  height: 3vw;
+  flex-shrink: 0;
 }
+
 
 /* Header */
 
+
 header {
 
-  height: 100vh;
+  height: 5vh;
   width: 100%;
 }
 
@@ -95,19 +172,19 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* position: fixed; */
-  /* max-width: 1520px; */
   top: 16px;
 }
 
-.logo {
-  object-fit: scale-down;
+nav .logo img {
+  width: 208px;
+  height: 53px;
 }
 
 nav ul {
   display: flex;
   align-items: center;
-  gap: 60px;
+  justify-content: space-between;
+  gap: 3.75rem;
   list-style: none;
 }
 
@@ -119,13 +196,15 @@ nav ul li a {
 
 nav input {
   border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.03);
   outline: none;
-  width: 225px;
-  height: 48px;
-  padding: 20px;
+  width: 14.063rem;
+  height: 3rem;
+  padding: 1.25rem;
   color: var(--light-gray);
+  /* align-items: center; */
+  vertical-align: bottom;
 }
 
 /* Hero Section */
@@ -136,15 +215,23 @@ nav input {
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 300px;
+
 }
 
 .hero-section .left {
-  width: 756px;
+  display: flex;
+  width: 50%;
+  max-height: 16.25rem;
+  flex-direction: column;
+  align-items: center; /* Updated to center content */
+  gap: 1.813rem;
+  flex-shrink: 0;
+  margin-bottom: 3.125rem;
 }
+
 .hero-section .left h1 {
-  font-size: 70px;
-  margin-bottom: 10px;
+  font-size: 4.375rem;
+  margin-bottom: 0.625rem;
   font-weight: 400;
 
 }
@@ -152,35 +239,55 @@ nav input {
 .hero-section .left p {
   font-size: 18px;
   color: var(--light-gray);
-  margin-bottom: 32px;
+  margin-bottom: 1.125rem;
+}
+
+.hero-section .right {
+  display: flex;
+  width: 50%;
+  max-height: 35.625rem;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  row-gap: 0.5rem;
+  margin: auto 3.75rem;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.hero-section .right img {
+  max-width: 15.5rem;
+  max-height: 17.75rem;
 }
 
 /* White Paper Section */
 
-.Whitepapersection {
-  width: 788px; 
-  height: 131px; 
-  flex-direction: column; 
-  justify-content: flex-start; 
-  align-items: center; 
-  gap: 32px; 
-  display: inline-flex;
+.whitepaper-section .wrapper {
+  padding: 0 8.65%; 
+}
+
+.whitepaper-section {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .whitepaper-section .top {
   text-align: center;
-  margin-bottom: 156px;
+  margin-bottom: 9.75rem;
+  margin-top: 12.5rem;
 }
 
 .whitepaper-section .top h1 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 500;
   align-self: stretch; 
-  height: 35px; 
+  height: 2.25rem; 
   text-align: center; 
   color: var(--white);  
-  line-height: 24px; 
+  line-height: 1.5rem; 
   word-wrap: break-word;
 }
 
@@ -192,17 +299,57 @@ nav input {
 }
 
 .whitepaper-section .top p a {
-  text-decoration: none;
+  /* text-decoration: none; */
   color: var(--light-gray);
 }
 
 .whitepaper-section .bottom {
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  gap: 1.25rem; /* Adjust as needed */
+}
+
+.whitepaper-section .bottom h1 {
+  font-size: 1.67vw;
+  font-weight: 400;
+  text-align: center;
+  text-wrap: nowrap;
+  margin: 0;
+}
+.whitepaper-section .subscribe-box .form {
+  display: inline-flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  align-items: center;
+  gap: 5%; /* Adjust the gap as needed */
+}
+
+.whitepaper-section .bottom input {
+  flex-grow: 1;
+  max-width: 41.875rem;
+  min-width: 18.75rem;
+  height: 70px; /* Ensure the input takes full width below 1345px */
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--light-gray);
+  text-align: center;
+  outline: none;
+  
+}
+
+.whitepaper-section .bottom input, 
+.whitepaper-section .bottom .btn.subscribe {
+  flex-shrink: 1; /* Allow elements to shrink as needed */
+  flex-grow: 1; /* Allow elements to grow as needed */
 }
 
 .fullscreenpurpleSideBar {
-  height: 70px;
+  width: 0.625rem;
+  height: 4.375rem;
+  flex-shrink: 0;
 }
 
 .smallscreenpurpleSideBar {
@@ -213,77 +360,95 @@ nav input {
   visibility: hidden;
 }
 
-.whitepaper-section .bottom h1 {
-  font-size: 32px;
-  font-weight: 400;
-  margin-left: 10px;
-  margin-right: 36px;
+.subscribe-box {
+  display: flex;
+  align-items: center;
 }
 
-.whitepaper-section .bottom input {
-  width: 670px;
-  height: 70px;
-  font-size: 14px;
-  border-radius: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.07);
-  background: rgba(255, 255, 255, 0.03);
-  color: var(--light-gray);
-  text-align: center;
-  margin-bottom: 67px;
+.purple-bar {
+  width: 100%;
+  height: 0.625rem; /* Adjust the height as needed */
+  margin-top: 3.75rem;
 }
+
 
 /* About Us Section */
 
+
 .aboutus-section {
-  margin-top: 67px;
   display: flex;
+  justify-content: center;
   align-items: center;
-  margin-bottom: 57px;
+  flex-wrap: wrap;
+  margin: 4rem auto;
 }
 
 .aboutus-section .left {
-  align-items: start;
+  height: 24.5rem;
+  align-items: center;
 }
+.aboutus-section > .left {
+  flex:1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.aboutus-section > .right {
+  flex: 3;
+}
+
 .aboutus-section .left .logo {
-  margin-left: 40px;
-  margin-right: 110px;
-  margin-bottom: 67px;
+  max-width: 13rem; /* Adjust this value as needed */
+  align-items: center; /* Center the logo */
+  margin-bottom: 6rem; 
+}
+
+.aboutus-section .left .logo img {
+  width: 100%; /* Ensure the image takes the full width of the container */
+  height: auto;
 }
 
 .aboutus-section .left .fullscreensocial ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
   align-items: center;
-  gap: 30px;
-  list-style: none;
-  text-align: left;
-  width: 208px;
-
-  margin-left: 0;
+  gap: 1.875rem;
 }
 
-.aboutus-section .left .fullscreensocial ul img {
-  height: 28px;
+.aboutus-section .left .fullscreensocial img {
+  height: 2.1rem;
+  width: auto;
+}
+
+.aboutus-section .right {
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .aboutus-section .right h1 {
-  font-size: 36px;
+  font-size: 2rem;
   font-weight: 600;
-  line-height: 60px;
+  line-height: 3.75;
 }
 
 .aboutus-section .right p {
   color: var(--light-gray);
-  font-size: 14px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 400;
-  line-height: 30px;
+  line-height: 1.875rem;
   word-wrap: normal;
   text-align: justify;
 }
 
 .aboutus-section .joinus {
   font-weight: 700;
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .smallscreensocial {
@@ -293,36 +458,353 @@ nav input {
 /* Footer Section */
 
 .footer-section {
+  margin-top: 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--almost-black);
-  height: 80px;
-  padding: 20px;
+  height: 5rem;
+  text-align: center;
+  padding: 0 12rem;
 }
 
 .footer-section .left ul {
   display: flex;
-  gap: 50px;
+  gap: 3.125rem;
   list-style: none;
-  bottom: 106px;
+  bottom: 6.75rem;
 }
 
 .footer-section .left ul li a {
   text-decoration: none;
   color: var(--light-gray);
-  font-size: 16px;
+  font-size: 1rem;
+}
+
+.footer-section .right {
+  text-align: right;
 }
 
 
 
-/* iPad Display Settings */
+
+
+/* 1345px Display Settings */
+
+
+
+
+
+@media(max-width: 1345px) {
+  header {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .btn.walletconnect {
+    display: inline-flex;
+    padding: 13px 21px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .btn.search {
+    width: 2.375rem;
+    height: 2.735rem;  
+  }
+
+  .btn.mintNFT {
+    width: 150px;
+    height: 58px;
+    flex-shrink: 0;
+    font-size: 16px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .btn.subscribe {
+    /* display: flex; */
+    width: 3vw;
+    height: 3vw;
+    padding: 7px 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 10px; */
+    flex-shrink: 0;
+    font-size: 26px;
+    font-weight: 500;
+  }
+
+  .wrapper {
+    padding: 0 90px;
+  }
+
+  nav {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 16px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+
+  nav .logo img {
+    width: 208px;
+    height: 53px;
+  }
+
+  nav input {
+    width: 153px;
+    height: 28px;
+    font-size: 14px;
+    color: var(--light-gray);
+  }
+  
+  nav ul {
+    gap: 70px;
+  }
+
+  nav ul form {
+    display: flex;
+    align-items: center;
+  }
+
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 254px;
+    margin-bottom: 0;
+    padding-bottom: 100px;
+  }
+
+  .hero-section .left {
+    width: 48%; /* Adjust the width as needed */
+    max-width: 520px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 29px;
+    flex-shrink: 0;
+    margin-left: 132px;
+  }
+
+  .hero-section .left h1 {
+    font-size: 52px;
+   
+  }
+  
+  .hero-section .left p {
+    font-size: 16px;
+    color: var(--light-gray);
+    /* margin-bottom: 0; */
+    margin: 0;
+  }
+
+
+  .hero-section .right {
+    width: 48%; /* Adjust the width as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+  }
+
+  .hero-section .right img {
+    margin-right: 202px;
+    max-width: 248px;
+    max-height: 284px;
+  }
+  
+  .whitepaper-section .top h1 {
+    font-size: 32px;
+    line-height: 24px;
+    height: 35px;
+    flex-shrink: 0;
+    align-self: stretch;
+    margin-top: 260px;
+  }
+  
+  .whitepaper-section .top p {
+    margin-top: 32px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    height: 64px;
+    flex-shrink: 0;
+    align-self: stretch;
+  }
+  
+  .whitepaper-section .top p a {
+    text-decoration: none;
+    color: var(--light-gray);
+  }
+  
+
+
+  .whitepaper-section .bottom {
+    margin-top: 151px;
+    margin-bottom: 30px;
+    display: flex;
+    max-width: 1041px;
+    padding: 0px 8px;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .whitepaper-section .bottom h1 {
+    font-size: 2vw;
+    font-weight: 400;
+    flex-shrink: 0;
+    text-align: center;
+  }
+ 
+   .fullscreenpurpleSideBar {
+    visibility: hidden;
+  }
+
+  .smallscreenpurpleSideBar {
+    visibility: visible;
+    width: 10px;
+    height: 55px;
+    margin-right: 10px;
+  }
+
+  .whitepaper-section .bottom form {
+    display: flex;
+    margin-left: 40px;
+    width: 530px;
+    height: 60px;
+  }
+  
+  .whitepaper-section .bottom input {
+    width: 50%;
+  }
+
+  .purple-bar {
+    margin: auto;
+    width: 100%;
+    margin-top: 60px;
+  }
+
+  .aboutus-section {
+    display: flex;
+    margin-top: 60px;
+    width: 1075px;
+    height: 314px;
+    flex-shrink: 0;
+  }
+
+  .aboutus-section .left {
+   max-width: 208px;
+   height: 145px;
+   display:flexbox;
+   margin-right: 78px;
+  }
+
+  .aboutus-section .logo img {
+    width: 208px;
+    height: 53px;
+    flex-shrink: 0;
+
+  }
+
+  .fullscreensocial {
+    visibility: visible;
+    width: 179px;
+    height: 20px;
+    display: flex;
+  }
+  
+  .smallscreensocial {
+    visibility: hidden;
+  }
+
+  .fullscreensocial ul {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+    text-align: center;
+  }
+
+  .fullscreensocial img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .aboutus-section .right {
+    max-width: 750px;
+    height: 283px;
+    margin-right: 100px;
+  }
+  .aboutus-section .right h1 {
+    font-size: 16px;
+  }
+
+  .aboutus-section .right p {
+    font-size: 14px;
+    text-align: justify;
+  }
+
+  .joinus {
+    font-size: 11px;
+  }
+
+  .wrapper-footer  {
+
+    background-color: var(--almost-black);
+    height: 60px;
+    padding: 0;
+    display: block;
+    text-align: center;
+  }
+
+  .footer-section {
+    padding: 20px;
+  }
+
+  .footer-section .left {
+    margin: 0px 65px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 28px; 
+    gap: 20px;
+  }
+
+  .footer-section .right {
+    margin: 20px 65px;
+    white-space: nowrap;
+    font-size: 14px;
+    line-height: 28px; 
+    gap: 20px;
+  }
+}
+
+
+
+/* 1100px Display Settings */
+
 
 
 
 @media(max-width: 1100px) {
+
+  .wrapper {
+    padding: 0 80px;
+  }
+
   header {
     height: 650px;
+    margin-top: 30px;
   }
   .btn.walletconnect {
     width: 117px;
@@ -331,6 +813,7 @@ nav input {
     font-weight: 400;
     text-align: center;
     padding: 10px;
+    margin-left: 39px;
   }
 
   .btn.search {
@@ -348,7 +831,7 @@ nav input {
     padding: 13px;
     text-align: center;
     margin-top: 30px;
-    margin-left: 364px;
+    margin-left: 100px;
     margin-bottom: 0;
   }
 
@@ -363,18 +846,25 @@ nav input {
   }
 
   nav {
+    display: flex;
+    align-items: center;
+    margin: auto;
     width: 100%;
-    left: 0;
-    right: 0;
+  }
+
+  nav ul {
+    margin: auto;
+    width: 100%;
   }
 
   nav ul li a {
-    font-size: 10px;
+    font-size: 12px;
+    font-weight: 600;
   }
 
   nav .logo img {
-    width: 104x;
-    height: 27px;
+    width: 109x;
+    height: 29px;
   }
 
   nav input {
@@ -385,30 +875,36 @@ nav input {
     outline: none;
   }
   
-  nav ul {
-    gap: 30px;
-  }
-
   nav ul form {
     display: flex;
     align-items: center;
+    max-width: 148px;
+    max-height: 37px;
   }
 
   .hero-section {
-    display: block;
-    margin-top: 54px;
+    margin-top: 158px;
     margin-bottom: 0;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
   }
   
   .hero-section .left {
     width: 100%;
     display: block;
+    width: 512px;
+    height: 122px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 17px;
   }
+
   .hero-section .left h1 {
     margin: 0;
     font-size: 36px;
     font-weight: 400;
-  
   }
   
   .hero-section .left p {
@@ -417,25 +913,45 @@ nav input {
     margin-bottom: 0;
   }
 
+  .hero-section .right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 13px;
+    flex-shrink: 0;
+    flex-wrap: nowrap;
+  }
+
   .hero-section .right img {
     padding: 20px;
     gap: 28px;
   }
 
   .hero-section .right .girl {
-    width: 268px;
-    height: 301px;
-    margin-left: 48px;
+    width: 100%;
+    height: auto;
   }
 
   .hero-section .right .boy {
-    width: 201px;
-    height: 224px;
+    height: 80%;
+    width: auto;
   }
   
   .whitepaper-section {
-    margin-top: 120px;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+     flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
   }
+
+  .whitepaper-section .top {
+    margin-left: 13
+  }
+
   .whitepaper-section .top h1 {
     font-size: 28px;
     font-weight: 500;
@@ -458,6 +974,7 @@ nav input {
     margin-top: 151px;
     display: block;
     text-align: center;
+    justify-content: center;
   }
   
   .whitepaper-section .bottom h1 {
@@ -475,16 +992,18 @@ nav input {
     visibility: visible;
     width: 6px;
     height: 41px;
-    margin-right: 23px;
+    margin-left: -20px;
   }
 
+
   .whitepaper-section .bottom form {
-    display: flex;
-    margin-left: 40px;
+    /* display: flex; */
+    width: 336px;
+    height: 39px;
   }
   
   .whitepaper-section .bottom input {
-    width: 387px;
+    width: 336px;
     height: 39px;
     text-align: center;
     margin-bottom: 67px;
@@ -495,15 +1014,17 @@ nav input {
   }
 
   .aboutus-section {
-    display: block;
-    margin-top: 0;
+    margin: 0 auto;
+    /* padding: 0; */
+    display: inline-table;
+    justify-content: center;
+    align-items: center;
   }
 
   .aboutus-section .logo img {
-    width: 280px;
-    height: 80px;
-    flex-shrink: 0;
-    margin-left: 120px;
+    width: 357px;
+    height: 93px;
+    /* margin-left: 200px; */
   }
 
   .fullscreensocial {
@@ -551,6 +1072,7 @@ nav input {
   .footer-section {
     display: block;
     text-align: center;
+    padding: 20px;
   }
   .footer-section .left {
     margin: 40px 100px;
@@ -560,3 +1082,10 @@ nav input {
     gap: 20px;
   }
 }
+
+
+
+/* iPad Display Settings */
+
+
+
