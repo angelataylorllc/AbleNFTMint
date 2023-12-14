@@ -115,7 +115,7 @@ textarea:not([rows]) {
 .wrapper  {
   max-width: 107.5rem;
   margin: 0 auto;
-  padding: 1rem 10.375rem;
+  padding: 1rem 4rem;
 }
 
 
@@ -153,8 +153,8 @@ textarea:not([rows]) {
   font-size: 2vw;
   border: none;
   background: var(--medium-purple);
-  width: 3vw;
-  height: 3vw;
+  width: 4vw;
+  /* height: 3vw; */
   flex-shrink: 0;
 }
 
@@ -172,12 +172,12 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  top: 16px;
+  top: 1rem;
 }
 
 nav .logo img {
-  width: 208px;
-  height: 53px;
+  width: 13rem;
+  height: 3.313rem;
 }
 
 nav ul {
@@ -191,11 +191,11 @@ nav ul {
 nav ul li a {
   text-decoration: none;
   color: var(--white);
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 nav input {
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.03);
   outline: none;
@@ -211,19 +211,18 @@ nav input {
 
 .hero-section {
   display: flex;
-  height: 100vh;
+  height: 80vh;
   width: 100%;
   align-items: center;
   justify-content: space-between;
-
+  margin-top: 3em;
 }
 
 .hero-section .left {
   display: flex;
-  width: 50%;
   max-height: 16.25rem;
   flex-direction: column;
-  align-items: center; /* Updated to center content */
+  align-items:flex-start;
   gap: 1.813rem;
   flex-shrink: 0;
   margin-bottom: 3.125rem;
@@ -237,27 +236,30 @@ nav input {
 }
 
 .hero-section .left p {
-  font-size: 18px;
+  font-size: 1.2rem;
   color: var(--light-gray);
-  margin-bottom: 1.125rem;
+  margin-bottom: 3rem;
+}
+
+.hero-section > .left, .right {
+  flex: 1;
 }
 
 .hero-section .right {
   display: flex;
-  width: 50%;
-  max-height: 35.625rem;
-  justify-content: flex-end;
+  /* max-height: 35.625rem; */
+  justify-content: center;
   align-items: center;
   align-content: center;
-  row-gap: 0.5rem;
+  gap: 1rem;
   margin: auto 3.75rem;
   flex-wrap: wrap;
   text-align: center;
 }
 
 .hero-section .right img {
-  max-width: 15.5rem;
-  max-height: 17.75rem;
+  /* max-width: 15.5rem;
+  max-height: 17.75rem; */
 }
 
 /* White Paper Section */
@@ -293,9 +295,9 @@ nav input {
 
 .whitepaper-section .top p {
   color: var(--light-gray);
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: 400;
-  line-height: 30px; 
+  line-height: 1.875rem; 
 }
 
 .whitepaper-section .top p a {
@@ -307,17 +309,22 @@ nav input {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 1.25rem; /* Adjust as needed */
+  gap: 3rem; /* Adjust as needed */
 }
 
 .whitepaper-section .bottom h1 {
-  font-size: 1.67vw;
+  font-size: 1.8vw;
   font-weight: 400;
   text-align: center;
   text-wrap: nowrap;
   margin: 0;
 }
-.whitepaper-section .subscribe-box .form {
+
+.whitepaper-section .subscribe-box {
+  width: 400%;
+}
+
+.whitepaper-section .form {
   display: inline-flex;
   flex-wrap: nowrap;
   width: 100%;
@@ -327,11 +334,10 @@ nav input {
 
 .whitepaper-section .bottom input {
   flex-grow: 1;
-  max-width: 41.875rem;
-  min-width: 18.75rem;
-  height: 70px; /* Ensure the input takes full width below 1345px */
+  height: 5rem; /* Ensure the input takes full width below 1345px */
+  width: 30rem;
   font-size: 1rem;
-  border-radius: 5px;
+  border-radius: 0.313rem;
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(255, 255, 255, 0.03);
   color: var(--light-gray);
@@ -433,7 +439,7 @@ nav input {
 .aboutus-section .right h1 {
   font-size: 2rem;
   font-weight: 600;
-  line-height: 3.75;
+  line-height: 3.75rem;
 }
 
 .aboutus-section .right p {
@@ -457,6 +463,11 @@ nav input {
 
 /* Footer Section */
 
+.wrapper-footer {
+  max-width: 107.5rem;
+  margin: 0 auto;
+}
+
 .footer-section {
   margin-top: 10rem;
   display: flex;
@@ -465,26 +476,29 @@ nav input {
   background-color: var(--almost-black);
   height: 5rem;
   text-align: center;
-  padding: 0 12rem;
+  padding: 0 4rem;
   font-size: 1rem;
   margin-bottom: 6.75rem;
 }
 
 .footer-section .left ul {
   display: flex;
-  gap: 3.125rem;
+  gap: 4rem;
   list-style: none;
 }
 
+/* .footer-section .left li {
+  justify-content: space-around;
+} */
+
 .footer-section .left ul li a {
   text-decoration: none;
-  color: var(--light-gray);
-  
+  color: var(--light-gray);  
 }
 
 .footer-section .right {
   display: flex;
-  align-items: center;
+  justify-content: flex-end;
   
 }
 
@@ -500,16 +514,16 @@ nav input {
 
 @media(max-width: 1345px) {
   header {
-    height: 100vh;
+    height: 15vh;
     width: 100%;
   }
 
   .btn.walletconnect {
     display: inline-flex;
-    padding: 13px 21px;
+    padding: 0.813rem 1.313rem;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
   }
 
   .btn.search {
@@ -518,13 +532,13 @@ nav input {
   }
 
   .btn.mintNFT {
-    width: 150px;
-    height: 58px;
+    width: 9.375rem;
+    height: 3.625rem;
     flex-shrink: 0;
-    font-size: 16px;
-    padding: 20px;
+    font-size: 1rem;
+    padding: 1.25rem;
     text-align: center;
-    margin-top: 30px;
+    margin-top: 1.875rem;
     margin-bottom: 0;
   }
 
@@ -538,40 +552,40 @@ nav input {
     align-items: center;
     /* gap: 10px; */
     flex-shrink: 0;
-    font-size: 26px;
+    font-size: 1.625rem;
     font-weight: 500;
   }
 
   .wrapper {
-    padding: 0 90px;
+    padding: 0 5.625rem;
   }
 
   nav {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    top: 16px;
+    top: 1rem;
   }
 
   nav ul li a {
-    font-size: 16px;
+    font-size: 1rem;
   }
 
   nav .logo img {
-    width: 208px;
-    height: 53px;
+    width: 13rem;
+    height: 3.313rem;
   }
 
   nav input {
-    width: 153px;
-    height: 28px;
-    font-size: 14px;
+    width: 9.563rem;
+    height: 1.75rem;
+    font-size: 1rem;
     color: var(--light-gray);
   }
   
   nav ul {
-    gap: 70px;
+    gap: 4.375rem;
   }
 
   nav ul form {
@@ -580,49 +594,43 @@ nav input {
   }
 
   .hero-section {
+    height: 70vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 254px;
     margin-bottom: 0;
-    padding-bottom: 100px;
   }
 
   .hero-section .left {
-    width: 48%; /* Adjust the width as needed */
-    max-width: 520px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 29px;
     flex-shrink: 0;
-    margin-left: 132px;
+    padding: 1rem;
   }
 
   .hero-section .left h1 {
-    font-size: 52px;
+    font-size: 3.25rem;
    
   }
   
   .hero-section .left p {
-    font-size: 16px;
+    font-size: 1.125rem;
     color: var(--light-gray);
     /* margin-bottom: 0; */
     margin: 0;
   }
 
-
   .hero-section .right {
-    width: 48%; /* Adjust the width as needed */
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 13px;
+    gap: 1rem;
     flex-shrink: 0;
   }
 
   .hero-section .right img {
-    margin-right: 202px;
     max-width: 248px;
     max-height: 284px;
   }
