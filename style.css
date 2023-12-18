@@ -1,6 +1,6 @@
 :root {
   --medium-purple: #7759F3;
-  --light-gray: #C4C4C4;
+  --light-gray: #e7dddd;
   --neon-aqua: #3AFCC2;
   --royal-purple: #8E2AC3;
   --sunflower-yellow: #E0C566;
@@ -145,16 +145,16 @@ textarea:not([rows]) {
   width: 3rem;
   height: 3rem;
   border: none;
-  font-size: 1.75rem;
+  font-size: 2rem;
   background: var(--medium-purple);
 }
 
 .btn.subscribe {
-  font-size: 2vw;
+  font-size: 2.5rem;
   border: none;
   background: var(--medium-purple);
-  width: 4vw;
-  /* height: 3vw; */
+  width: 4rem;
+  height: 4rem;
   flex-shrink: 0;
 }
 
@@ -269,7 +269,6 @@ nav input {
 }
 
 .whitepaper-section {
-  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -277,9 +276,15 @@ nav input {
 
 
 .whitepaper-section .top {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
   text-align: center;
-  margin-bottom: 9.75rem;
-  margin-top: 12.5rem;
+  margin-bottom: 10.375rem;
+}
+
+.whitepaper-section .top a {
+  font-weight: bold;
 }
 
 .whitepaper-section .top h1 {
@@ -309,7 +314,8 @@ nav input {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 3rem; /* Adjust as needed */
+  gap: 3rem; 
+  margin-bottom: 2rem;
 }
 
 .whitepaper-section .bottom h1 {
@@ -334,9 +340,9 @@ nav input {
 
 .whitepaper-section .bottom input {
   flex-grow: 1;
-  height: 5rem; /* Ensure the input takes full width below 1345px */
+  height: 4rem; /* Ensure the input takes full width below 1345px */
   width: 30rem;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 0.313rem;
   border: 1px solid rgba(255, 255, 255, 0.07);
   background: rgba(255, 255, 255, 0.03);
@@ -349,7 +355,6 @@ nav input {
 .whitepaper-section .bottom input, 
 .whitepaper-section .bottom .btn.subscribe {
   flex-shrink: 1; /* Allow elements to shrink as needed */
-  flex-grow: 1; /* Allow elements to grow as needed */
 }
 
 .fullscreenpurpleSideBar {
@@ -372,8 +377,8 @@ nav input {
 }
 
 .purple-bar {
-  width: 100%;
-  height: 0.625rem; /* Adjust the height as needed */
+  width: 70%;
+  height: 1.8rem; /* Adjust the height as needed */
   margin-top: 3.75rem;
 }
 
@@ -387,6 +392,7 @@ nav input {
   align-items: center;
   flex-wrap: wrap;
   margin: 4rem auto;
+  max-width: 81.25rem;
 }
 
 .aboutus-section .left {
@@ -401,13 +407,17 @@ nav input {
 }
 
 .aboutus-section > .right {
-  flex: 3;
+  flex: 2;
 }
 
 .aboutus-section .left .logo {
   max-width: 13rem; /* Adjust this value as needed */
   align-items: center; /* Center the logo */
-  margin-bottom: 6rem; 
+  /* margin-bottom: 6rem;  */
+}
+
+.ipadBiglogo {
+  visibility: hidden;
 }
 
 .aboutus-section .left .logo img {
@@ -421,11 +431,16 @@ nav input {
   margin: 0;
   display: flex;
   align-items: center;
-  gap: 1.875rem;
+  justify-content: space-between;
+}
+
+.aboutus-section .left .fullscreensocial ul li {
+  flex: 1;
+  margin-right: 1.5rem;
 }
 
 .aboutus-section .left .fullscreensocial img {
-  height: 2.1rem;
+  height: 1.7rem;
   width: auto;
 }
 
@@ -437,14 +452,14 @@ nav input {
 }
 
 .aboutus-section .right h1 {
-  font-size: 2rem;
+  font-size: 1.2rem;
   font-weight: 600;
   line-height: 3.75rem;
 }
 
 .aboutus-section .right p {
   color: var(--light-gray);
-  font-size: 1rem;
+  font-size: 0.85rem;
   font-style: normal;
   font-weight: 400;
   line-height: 1.875rem;
@@ -465,16 +480,15 @@ nav input {
 
 .wrapper-footer {
   max-width: 107.5rem;
-  margin: 0 auto;
 }
 
 .footer-section {
-  margin-top: 10rem;
+  margin-top: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: var(--almost-black);
-  height: 5rem;
+  height: 10rem;
   text-align: center;
   padding: 0 4rem;
   font-size: 1rem;
@@ -543,17 +557,7 @@ nav input {
   }
 
   .btn.subscribe {
-    /* display: flex; */
-    width: 3vw;
-    height: 3vw;
-    padding: 7px 10px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    /* gap: 10px; */
-    flex-shrink: 0;
-    font-size: 1.625rem;
-    font-weight: 500;
+    font-size: 2.5rem;
   }
 
   .wrapper {
@@ -635,13 +639,16 @@ nav input {
     max-height: 284px;
   }
   
+  /* .whitepaper-section {
+    height: 50%;
+  } */
   .whitepaper-section .top h1 {
-    font-size: 32px;
-    line-height: 24px;
-    height: 35px;
+    font-size: 2rem;
+    line-height: 1.5rem;
+    height: 2.25rem;
     flex-shrink: 0;
     align-self: stretch;
-    margin-top: 260px;
+    margin-top: 8.75rem;
   }
   
   .whitepaper-section .top p {
@@ -696,10 +703,6 @@ nav input {
     height: 60px;
   }
   
-  .whitepaper-section .bottom input {
-    width: 50%;
-  }
-
   .purple-bar {
     margin: auto;
     width: 100%;
@@ -708,31 +711,14 @@ nav input {
 
   .aboutus-section {
     display: flex;
-    margin-top: 60px;
-    width: 1075px;
-    height: 314px;
+    margin-top: 4rem;
     flex-shrink: 0;
-  }
-
-  .aboutus-section .left {
-   max-width: 208px;
-   height: 145px;
-   display:flexbox;
-   margin-right: 78px;
-  }
-
-  .aboutus-section .logo img {
-    width: 208px;
-    height: 53px;
-    flex-shrink: 0;
-
   }
 
   .fullscreensocial {
     visibility: visible;
-    width: 179px;
-    height: 20px;
     display: flex;
+    justify-content: space-between;
   }
   
   .smallscreensocial {
@@ -741,24 +727,18 @@ nav input {
 
   .fullscreensocial ul {
     display: flex;
-    align-items: center;
-    gap: 35px;
+    justify-content: space-between;
     list-style: none;
     text-align: center;
   }
 
-  .fullscreensocial img {
-    width: 20px;
-    height: 20px;
+  .fullscreensocial ul li a {
+    width: 1rem;
+    height: 1rem;
   }
 
-  .aboutus-section .right {
-    max-width: 750px;
-    height: 283px;
-    margin-right: 100px;
-  }
   .aboutus-section .right h1 {
-    font-size: 16px;
+    font-size: 1.25rem;
   }
 
   .aboutus-section .right p {
@@ -773,30 +753,19 @@ nav input {
   .wrapper-footer  {
 
     background-color: var(--almost-black);
-    height: 60px;
     padding: 0;
-    display: block;
     text-align: center;
   }
 
-  .footer-section {
-    padding: 20px;
-  }
-
   .footer-section .left {
-    margin: 0px 65px;
     white-space: nowrap;
-    font-size: 14px;
-    line-height: 28px; 
-    gap: 20px;
+    font-size: 1rem;
+    gap: 1.25rem;
   }
 
   .footer-section .right {
-    margin: 20px 65px;
     white-space: nowrap;
-    font-size: 14px;
-    line-height: 28px; 
-    gap: 20px;
+    font-size: 1rem;
   }
 }
 
@@ -809,79 +778,85 @@ nav input {
 
 @media(max-width: 1100px) {
 
-  .wrapper {
+  /* .wrapper {
     padding: 0 80px;
-  }
+  } */
 
   header {
-    height: 650px;
-    margin-top: 30px;
+    height: 3.75rem;
+    margin-top: 2.25rem;
   }
+
   .btn.walletconnect {
-    width: 117px;
-    height: 37px;
-    font-size: 12px;
+    font-size: 0.75rem;
+    width: 7.313rem;
+    height: 2.3rem;
     font-weight: 400;
     text-align: center;
-    padding: 10px;
-    margin-left: 39px;
+    flex-wrap: nowrap;
+    padding: 0;
   }
 
   .btn.search {
-    width: 28px;
-    height: 28px;
-    font-size: 16px;
-    padding: 4px;
-    
+    display: flex;
+    width: 2.58rem;
+    height: 2.58rem;
+    font-size: 2rem; 
+    align-items: center;
+    padding: .7rem;
+  }
+
+  .btn-style {
+    margin-left: 6.25rem;
   }
 
   .btn.mintNFT {
-    width: 97px;
-    height:38px;
-    font-size: 12px;
-    padding: 13px;
-    text-align: center;
-    margin-top: 30px;
-    margin-left: 100px;
+    display: flex;
+    width: 7rem;
+    height:3rem;
+    font-size: 0.875rem;
+    align-items: center;
     margin-bottom: 0;
+    padding: 1.58rem;
   }
 
   .btn.subscribe {
-    width: 39px;
-    height: 39px;
-    font-size: 24px;
+    width: auto;
+    height: auto;
+    font-size: 1.5rem;
   }
 
   .wrapper {
-    padding: 0 90px;
+    padding: 0 5.5rem;
   }
 
   nav {
+    margin-top: -2rem;
     display: flex;
     align-items: center;
-    margin: auto;
     width: 100%;
   }
 
   nav ul {
-    margin: auto;
     width: 100%;
+    gap: 1.7rem;
   }
 
   nav ul li a {
-    font-size: 12px;
+    font-size: 0.875rem;
     font-weight: 600;
   }
 
   nav .logo img {
-    width: 109x;
-    height: 29px;
+    width: 6.75rem;
+    max-width:fit-content;
+    height: 1.75rem;
   }
 
   nav input {
-    width: 153px;
-    height: 28px;
-    font-size: 10px;
+    height: 1.75rem;
+    width: 9.25rem;
+    font-size: 0.875rem;
     color: var(--light-gray);
     outline: none;
   }
@@ -889,12 +864,14 @@ nav input {
   nav ul form {
     display: flex;
     align-items: center;
-    max-width: 148px;
-    max-height: 37px;
+  }
+  
+  .nav-form {
+    display: flex;
   }
 
   .hero-section {
-    margin-top: 158px;
+    margin-top: 3.75rem;
     margin-bottom: 0;
     flex-direction: column;
     align-items: center;
@@ -903,49 +880,33 @@ nav input {
   
   .hero-section .left {
     width: 100%;
-    display: block;
-    width: 512px;
-    height: 122px;
-    flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
-    gap: 17px;
+    gap: 1.063rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2rem;
   }
 
   .hero-section .left h1 {
     margin: 0;
-    font-size: 36px;
+    font-size: 2.5rem;
     font-weight: 400;
   }
   
   .hero-section .left p {
-    font-size: 14px;
+    font-size: 1rem;
     color: var(--light-gray);
     margin-bottom: 0;
   }
 
   .hero-section .right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 13px;
-    flex-shrink: 0;
     flex-wrap: nowrap;
   }
 
-  .hero-section .right img {
-    padding: 20px;
-    gap: 28px;
-  }
-
   .hero-section .right .girl {
-    width: 100%;
-    height: auto;
+    height: 16.375rem;
   }
-
   .hero-section .right .boy {
-    height: 80%;
-    width: auto;
+    height: 11.563rem;
   }
   
   .whitepaper-section {
@@ -959,14 +920,15 @@ nav input {
     flex-shrink: 0;
   }
 
-  .whitepaper-section .top {
+  /* .whitepaper-section .top {
     margin-left: 13
-  }
+  } */
 
   .whitepaper-section .top h1 {
     font-size: 28px;
     font-weight: 500;
     line-height: 24px;
+    margin-top: 6rem;
   }
   
   .whitepaper-section .top p {
@@ -982,83 +944,98 @@ nav input {
   }
   
   .whitepaper-section .bottom {
-    margin-top: 151px;
     display: block;
     text-align: center;
-    justify-content: center;
+    margin-top: 1rem;
   }
   
   .whitepaper-section .bottom h1 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
-    flex-shrink: 0;
+    margin-bottom: 1rem;
     text-align: center;
   }
+
+  .whitepaper-section .bottom input {
+    font-size: 0.75rem;
+    text-align: left;
+  }
  
+.whitepaper-section .subscribe-box {
+  width: 100%;
+}
+
+
    .fullscreenpurpleSideBar {
     display: none;
   }
 
   .smallscreenpurpleSideBar {
     visibility: visible;
-    width: 6px;
-    height: 41px;
-    margin-left: -20px;
+    width: 0.375rem;
+    height: 3.75rem;
+    /* margin-left: -20px; */
   }
-
-
-  .whitepaper-section .bottom form {
-    /* display: flex; */
-    width: 336px;
-    height: 39px;
-  }
-  
-  .whitepaper-section .bottom input {
-    width: 336px;
-    height: 39px;
-    text-align: center;
-    margin-bottom: 67px;
-  }  
-
+ 
   .purple-bar {
     visibility: hidden;
   }
 
   .aboutus-section {
     margin: 0 auto;
-    /* padding: 0; */
-    display: inline-table;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
 
-  .aboutus-section .logo img {
-    width: 357px;
-    height: 93px;
-    /* margin-left: 200px; */
+  .aboutus-section > .left {
+    height: 12rem;
   }
+
+  .aboutus-section .left .logo img {
+   visibility: hidden;
+  }
+
+.ipadBiglogo {
+  visibility: visible;
+  height: 93px;
+  width: 357px;
+}
 
   .fullscreensocial {
     visibility: hidden;
   }
   .smallscreensocial {
     visibility: visible;
+    display: flex;
+    margin-top: 6rem;
+    justify-content: center;
+    padding-left: 2rem;
   }
 
   .smallscreensocial ul {
+    margin: 0;
     display: flex;
-    align-items: center;
-    gap: 30px;
+    gap: 1rem;
     list-style: none;
-    text-align: center;
-    width: 208px;
-    width: 768px;
-    margin: 88px 160px;
+    padding-inline-end: 40px;
+    width: 80%;
+  }
+
+  .smallscreensocial > ul > li {
+    flex: 1;
+    justify-self:center;
   }
 
   .smallscreensocial img {
-    width: 30px;
-    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .aboutus-section .right {
+    flex: 1;
+    width: 100%;
+    /* padding: 0 2.6rem; */
   }
   .aboutus-section .right h1 {
     font-size: 18px;
@@ -1067,6 +1044,7 @@ nav input {
   .aboutus-section .right p {
     font-size: 11px;
     text-align: justify;
+  
   }
 
   .joinus {
@@ -1076,15 +1054,16 @@ nav input {
   .wrapper-footer  {
 
     background-color: var(--almost-black);
-    height: 230px;
+    height: 17.5rem;
     padding: 0;
   }
 
   .footer-section {
-    display: block;
-    text-align: center;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 5rem;
   }
+
   .footer-section .left {
     margin: 40px 100px;
     white-space: nowrap;
@@ -1094,9 +1073,9 @@ nav input {
   }
 }
 
-
-
-/* iPad Display Settings */
+  .footer-section .right {
+  }
+/* mobile Display Settings */
 
 
 
