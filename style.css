@@ -1075,7 +1075,191 @@ nav input {
 
   .footer-section .right {
   }
-/* mobile Display Settings */
+
+
+/* mobile - 720px - 360px - Display Settings */
 
 
 
+@media(max-width: 720px) {
+
+.btn-style {
+  margin: 3px;
+  }
+
+.wrapper {
+  width: 100%;
+  }
+
+
+nav .logo img {
+    width: 194px;
+    height: 50px;
+    margin-top: 40px;
+  }
+
+.nav-search {
+    visibility: hidden;
+    width: 0rem;
+    }
+  
+nav {
+    flex-flow: column-reverse nowrap;
+    margin-bottom: 5rem;
+    
+    }
+
+nav ul {
+    justify-content: space-around;
+    padding-inline-start: 40px;
+    }
+
+  /*    Hero Section    */
+
+.hero-section {
+  margin-top: 10rem;
+  min-width: 260px;
+  max-width: 584px;
+  height: 90vh;
+  }
+
+.hero-section > .left {
+  max-height: 11.25rem; 
+  }
+
+.hero-section > .left > .hero-big h1 {
+  font-size: 1.25rem;
+  }
+
+.hero-section > .left > .hero-mint {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  }
+
+.hero-section > .left > .hero-mint p {
+  font-size: 0.75rem;
+  }
+
+.hero-section > .right {
+  flex-wrap: wrap;
+  max-height: 30rem;
+}
+
+.hero-section > .right > .girl {
+  max-width: 200px;
+}
+
+.hero-section > .right > .boy {
+  max-width: 150px;
+}
+
+
+/*    WhitePaper Section    */
+
+.whitepaper-section {
+  min-width: 260px;
+  max-width: 584px;
+}
+
+.whitepaper-section > .top > h1 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.whitepaper-section > .top > p {
+  font-size: 0.75rem;
+}
+
+.whitepaper-section > .bottom {
+  flex-direction: column;
+  width: 90%;
+}
+
+.whitepaper-section > .bottom > h1 {
+  font-size: 1rem;
+}
+
+.whitepaper-section .subscribe-box {
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.whitepaper-section .form {
+  width: 80%;
+}
+
+.whitepaper-section .bottom {
+ display: flex;
+}
+
+.whitepaper-section .form {
+  /* width: 80%; */
+  padding: 0;
+}
+.whitepaper-section .bottom form {
+  width: 70%;
+  margin-left: 1px;
+}
+
+.whitepaper-section .bottom input, 
+.smallscreenpurpleSideBar, 
+.btn.subscribe {
+  height: 32px;
+}
+
+.whitepaper-section .bottom input {
+  color: var(--white);
+  text-align: center;
+}
+
+/*    AboutUs Section    */
+
+.aboutus-section .left .logo img {
+  visibility: visible;
+}
+
+.aboutus-section > .left > .ipadBiglogo {
+  visibility: hidden;
+}
+
+.aboutus-section .left .fullscreensocial ul {
+  padding-inline-start: 0;
+  min-width: 280px;
+  max-width: 584px;
+  margin-bottom: 2rem;
+}
+
+
+.aboutus-section .right {
+  width: auto;
+}
+
+.smallscreensocial {
+  visibility: hidden;
+  margin-top: 0rem;
+}
+
+.fullscreensocial {
+  visibility: visible;
+}
+
+/*    Footer Section    */
+
+.wrapper-footer {
+  height: 7rem;
+  max-width: 95%;
+}
+
+.footer-section {
+  padding: 0;
+  height: 7rem;
+}
+
+.footer-section .left,
+.footer-section .right {
+  flex: 1;
+  margin: 0;
+}
+
+}
