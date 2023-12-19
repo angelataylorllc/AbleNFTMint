@@ -1073,9 +1073,6 @@ nav input {
   }
 }
 
-  .footer-section .right {
-  }
-
 
 /* mobile - 720px - 360px - Display Settings */
 
@@ -1085,6 +1082,11 @@ nav input {
 
 .btn-style {
   margin: 3px;
+  }
+
+  .btn.search {
+    width: 1px;
+    height: 1px;
   }
 
 .wrapper {
@@ -1114,13 +1116,17 @@ nav ul {
     padding-inline-start: 40px;
     }
 
+nav ul form {
+  width: 1px;
+}
+
   /*    Hero Section    */
 
 .hero-section {
   margin-top: 10rem;
   min-width: 260px;
   max-width: 584px;
-  height: 90vh;
+  height: 100vh;
   }
 
 .hero-section > .left {
@@ -1143,7 +1149,7 @@ nav ul {
 
 .hero-section > .right {
   flex-wrap: wrap;
-  max-height: 30rem;
+  /* max-height: 30rem; */
 }
 
 .hero-section > .right > .girl {
@@ -1157,7 +1163,10 @@ nav ul {
 
 /*    WhitePaper Section    */
 
-.whitepaper-section {
+.whitepaper-section,
+.aboutus-section,
+.aboutus-section .left .fullscreensocial ul,
+.aboutus-section .right {
   min-width: 260px;
   max-width: 584px;
 }
@@ -1173,7 +1182,7 @@ nav ul {
 
 .whitepaper-section > .bottom {
   flex-direction: column;
-  width: 90%;
+  width: 100%;
 }
 
 .whitepaper-section > .bottom > h1 {
@@ -1193,13 +1202,10 @@ nav ul {
  display: flex;
 }
 
-.whitepaper-section .form {
-  /* width: 80%; */
-  padding: 0;
-}
 .whitepaper-section .bottom form {
   width: 70%;
   margin-left: 1px;
+  height: 2rem;
 }
 
 .whitepaper-section .bottom input, 
@@ -1215,25 +1221,33 @@ nav ul {
 
 /*    AboutUs Section    */
 
+.aboutus-section {
+  align-items: center;
+}
+
+.aboutus-section .left .logo {
+  max-width: 12.125rem;
+}
+
 .aboutus-section .left .logo img {
   visibility: visible;
 }
 
 .aboutus-section > .left > .ipadBiglogo {
   visibility: hidden;
+  width: 1px;
 }
 
-.aboutus-section .left .fullscreensocial ul {
-  padding-inline-start: 0;
-  min-width: 280px;
-  max-width: 584px;
-  margin-bottom: 2rem;
+.aboutus-section .right,
+.aboutus-section .left .fullscreensocial ul,
+.footer-section .left ul  {
+  padding-inline-start: 0px;
 }
 
 
-.aboutus-section .right {
+/* .aboutus-section .right {
   width: auto;
-}
+} */
 
 .smallscreensocial {
   visibility: hidden;
@@ -1248,18 +1262,28 @@ nav ul {
 
 .wrapper-footer {
   height: 7rem;
-  max-width: 95%;
 }
 
 .footer-section {
-  padding: 0;
+  padding: 0 0.5rem;
   height: 7rem;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer-section .left,
 .footer-section .right {
   flex: 1;
-  margin: 0;
+  margin: 0 1rem;
 }
 
+.footer-section .left ul {
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.footer-section .left ul li a,
+.footer-section .left, .footer-section .right {
+  font-size: 0.875rem;
 }
