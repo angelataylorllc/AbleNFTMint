@@ -1,3 +1,5 @@
+@import "normalize.css";
+
 :root {
   --medium-purple: #7759F3;
   --light-gray: #e7dddd;
@@ -33,89 +35,20 @@ body {
   background: url("images/top_squiggly.svg") top no-repeat, linear-gradient(151deg, #1E0426 2.97%, #100C3A 25.62%, #130517 51.04%, 
   #050130 72.12%, #0A0426 91.18%);
   background-size: 120%;
-  height: 100vh;
+  /* height: 100vh; */
   width: 100%;
-  /* position: relative; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
-
-/* Imported Reset from https://andy-bell.co.uk/a-more-modern-css-reset/ */
-
-
-/* Prevent font size inflation */
-html {
-  -moz-text-size-adjust: none;
-  -webkit-text-size-adjust: none;
-  text-size-adjust: none;
-}
-
-/* Remove default margin in favour of better control in authored CSS */
-body, h1, h2, h3, h4, p,
-figure, blockquote, dl, dd {
-  margin-block-end: 0;
-}
-
-/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
-/* Set core body defaults */
-body {
-  min-height: 100vh;
-  line-height: 1.5;
-}
-
-/* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
-  line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
-}
-
-/* A elements that don't have a class get default styles */
-a:not([class]) {
-  text-decoration-skip-ink: auto;
-  color: currentColor;
-}
-
-/* Make images easier to work with */
-img,
-picture {
-  max-width: 100%;
-  display: block;
-}
-
-/* Inherit fonts for inputs and buttons */
-input, button,
-textarea, select {
-  font: inherit;
-}
-
-/* Make sure textareas without a rows attribute are not tiny */
-textarea:not([rows]) {
-  min-height: 10em;
-}
-
-/* Anything that has been anchored to should have extra scroll margin */
-:target {
-  scroll-margin-block: 5ex;
-}
-
-/* End Imported Reset */
-
 
 
 .wrapper  {
   max-width: 107.5rem;
   margin: 0 auto;
   padding: 1rem 4rem;
+  gap: 2rem;
 }
 
 
@@ -164,7 +97,7 @@ textarea:not([rows]) {
 
 header {
 
-  height: 5vh;
+  /* height: 5vh; */
   width: 100%;
 }
 
@@ -207,11 +140,14 @@ nav input {
   vertical-align: bottom;
 }
 
+nav input::placeholder {
+  color: var(--light-gray);
+}
 /* Hero Section */
 
 .hero-section {
   display: flex;
-  height: 80vh;
+  height: 100%;
   width: 100%;
   align-items: center;
   justify-content: space-between;
@@ -220,7 +156,7 @@ nav input {
 
 .hero-section .left {
   display: flex;
-  max-height: 16.25rem;
+  /* max-height: 16.25rem; */
   flex-direction: column;
   align-items:flex-start;
   gap: 1.813rem;
@@ -344,12 +280,16 @@ nav input {
   width: 30rem;
   font-size: 1.2rem;
   border-radius: 0.313rem;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  /* border: 1px solid rgba(255, 255, 255, 0.07); */
+  border: 1px solid rgba(255, 255, 255, 0.5);
   background: rgba(255, 255, 255, 0.03);
   color: var(--light-gray);
   text-align: center;
   outline: none;
-  
+}
+
+.whitepaper-section .bottom input::placeholder {
+  color: var(--light-gray);
 }
 
 .whitepaper-section .bottom input, 
@@ -479,31 +419,47 @@ nav input {
 /* Footer Section */
 
 .wrapper-footer {
-  max-width: 107.5rem;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--almost-black);
 }
 
+/* .wrapper  {
+  max-width: 107.5rem;
+  margin: 0 auto;
+  padding: 1rem 4rem;
+  gap: 2rem;
+} */
+
 .footer-section {
-  margin-top: 2rem;
+ width: 90%;
+  margin-top: 3rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--almost-black);
-  height: 10rem;
-  text-align: center;
-  padding: 0 4rem;
+  /* justify-content: space-between; */
+  min-height: 2rem;
+  max-height: 10rem;
+  /* text-align: center; */
+  margin: 0 4rem;
   font-size: 1rem;
-  margin-bottom: 6.75rem;
+  /* margin-bottom: 6.75rem; */
+}
+
+.footer-section .left {
+ flex: 1;
 }
 
 .footer-section .left ul {
   display: flex;
-  gap: 4rem;
   list-style: none;
+  padding-inline-start: 0;
 }
 
-/* .footer-section .left li {
-  justify-content: space-around;
-} */
+.footer-section .left li {
+  margin: 0 2rem;
+  white-space: nowrap;
+}
 
 .footer-section .left ul li a {
   text-decoration: none;
@@ -511,8 +467,10 @@ nav input {
 }
 
 .footer-section .right {
+  flex: 1;
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  margin: 0 2rem;
   
 }
 
@@ -982,7 +940,7 @@ nav input {
   }
 
   .aboutus-section {
-    margin: 0 auto;
+    /* margin: 0 auto; */
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -1054,18 +1012,18 @@ nav input {
   .wrapper-footer  {
 
     background-color: var(--almost-black);
-    height: 17.5rem;
+    /* height: 17.5rem; */
     padding: 0;
   }
 
   .footer-section {
     display: flex;
     flex-direction: column;
-    margin-top: 5rem;
+    margin-bottom: 1rem;
   }
 
   .footer-section .left {
-    margin: 40px 100px;
+    /* margin: 40px 100px; */
     white-space: nowrap;
     font-size: 14px;
     line-height: 28px; 
@@ -1081,7 +1039,7 @@ nav input {
 @media(max-width: 720px) {
 
 .btn-style {
-  margin: 3px;
+  margin: 2rem;
   }
 
   .btn.search {
@@ -1163,6 +1121,7 @@ nav ul form {
 
 /*    WhitePaper Section    */
 
+nav,
 .whitepaper-section,
 .aboutus-section,
 .aboutus-section .left .fullscreensocial ul,
@@ -1183,6 +1142,7 @@ nav ul form {
 .whitepaper-section > .bottom {
   flex-direction: column;
   width: 100%;
+  padding: 0rem;
 }
 
 .whitepaper-section > .bottom > h1 {
@@ -1190,8 +1150,8 @@ nav ul form {
 }
 
 .whitepaper-section .subscribe-box {
-  align-items: flex-start;
-  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .whitepaper-section .form {
@@ -1245,9 +1205,9 @@ nav ul form {
 }
 
 
-/* .aboutus-section .right {
-  width: auto;
-} */
+.aboutus-section .right {
+  padding: 0;
+}
 
 .smallscreensocial {
   visibility: hidden;
@@ -1262,10 +1222,11 @@ nav ul form {
 
 .wrapper-footer {
   height: 7rem;
+  
 }
 
 .footer-section {
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   height: 7rem;
   justify-content: center;
   align-items: center;
@@ -1274,7 +1235,8 @@ nav ul form {
 .footer-section .left,
 .footer-section .right {
   flex: 1;
-  margin: 0 1rem;
+  padding: 0 rem;
+  margin: 0 auto;
 }
 
 .footer-section .left ul {
@@ -1286,4 +1248,6 @@ nav ul form {
 .footer-section .left ul li a,
 .footer-section .left, .footer-section .right {
   font-size: 0.875rem;
+}
+
 }
