@@ -1,3 +1,5 @@
 # AbleNFTMint
 
-View example of this site here: https://storied-sherbet-61256f.netlify.app/ or here: https://ablenftmint.djdessert.com/
+Built with html and vanilla CSS
+
+View prototype of site frontend here: https://ablenftmint.djdessert.com/
